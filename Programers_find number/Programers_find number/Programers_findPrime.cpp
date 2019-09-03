@@ -1,10 +1,9 @@
 #include <string>
 #include<stdlib.h>
-#include <vector>
 #include<stdio.h>
 #include <iostream>
+#include<algorithm>
 using namespace std;
-//vector<char> numbers;
 string str_in,stmp;
 int cnt;
 int visit[9999999];
@@ -16,12 +15,10 @@ int change(string chnum);
 int solution(string numbers) {
 	int answer = 0;
 	cnt = 0;
+	//str_in=numbers; //if useing this code in Programers, you should delete main() and use this sentence 
 	for (int i = 1; i <=numbers.size(); i++) {
 		dfs(i,0);
-
 	}
-	//str_in=numbers;
-
 	answer = cnt;
 	return answer;
 }
