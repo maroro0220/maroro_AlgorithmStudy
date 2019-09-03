@@ -1,0 +1,6 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Programers_find number.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Programers_findPrime.cpp
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programers_find number\Programers_find number\Programers_findPrime.cpp(27,20): warning C4018:  '<=': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programers_find number\Programers_find number\Programers_findPrime.cpp(60,20): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programers_find number\Programers_find number\Programers_findPrime.cpp(80,7): warning C4101:  'tmp' :참조되지 않은 지역 변수입니다.
+  Programers_find number.vcxproj -> C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programers_find number\Debug\Programers_findPrime.exe

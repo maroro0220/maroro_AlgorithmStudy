@@ -18,8 +18,5 @@
     <ClCompile Include="BaekJoon13460.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ex.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
