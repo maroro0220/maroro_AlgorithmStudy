@@ -6,17 +6,7 @@
 using namespace std;
 
 vector<int> combi;
-/*
-int* seper(int a) {
-	int arr[3], t;
-	t = a;
-	arr[2] = t % 10;
-	t /= 10;
-	arr[1] = t % 10;
-	t /= 10;
-	arr[0] = t % 10;
-	return arr;
-}*/
+
 void seper(int arr[],int a) {
 	int t;
 	t = a;
@@ -52,33 +42,11 @@ int Permutation() {/* Permutation https://hahaite.tistory.com/294 */
 			}
 			cnt++;
 		}
-		//printf("combi:%d\n", tmp_num);
 		combi.push_back(tmp_num);
 		reverse(comb_tmp.begin() + 3, comb_tmp.end());
 		if (!next_permutation(comb_tmp.begin(), comb_tmp.end()))break;
 	}
-	/* combination
-	do {
-		int tmp_num;
-	    int cnt = 0;
-		
-		for (int i = 0; i < ind.size(); i++) {
-			if (ind[i] == 1 && comb_tmp[i]>0 && comb_tmp[i]<10) {
-				if (cnt == 0) {
-					tmp_num = comb_tmp[i];
-				}
-				else {
-					tmp_num = tmp_num * 10 + comb_tmp[i];
-				}
-				cnt++;
-				//printf("%d", comb_tmp[i]);
-			}
-		}
-		//printf("\n");
-		combi.push_back(tmp_num);
-//		printf("%d", tmp_num;)
-	} while (next_permutation(ind.begin(), ind.end()));
-	*/
+	
 	return 0;
 }
 int solution(vector<vector<int>> baseball) {
@@ -88,15 +56,12 @@ int solution(vector<vector<int>> baseball) {
 	arr_comb = (int*)calloc(3, sizeof(int));
 	arr_tmp = (int*)calloc(3, sizeof(int));
 	int arr_chk[100][988][2] = { 0, };
-	//int arr_chk[84][1][1];
 	Permutation();
-	//printf("combi size: %d\n", combi.size());
 	for (int i = 0; i < combi.size(); i++) {
 		int test = 0;
 		for (int j = 0; j < baseball.size(); j++) {
 			 seper(arr_tmp,baseball[j][0]);
 			 seper(arr_comb,combi[i]);
-			// arr_comb[0] = 3; arr_comb[1] = 2; arr_comb[2] = 4;
 			for(int z=0;z<3;z++){
 				if (arr_tmp[z] == arr_comb[z]) {
 					//strike
@@ -118,21 +83,12 @@ int solution(vector<vector<int>> baseball) {
 			if (arr_chk[j][combi[i]][0] == baseball[j][1] && arr_chk[j][combi[i]][1] == baseball[j][2]) {
 				++test;
 			}
-			//printf("combi:%dtest:%d\n",combi[i], test);
 			if (test== baseball.size()) {
 				answer++;
 			}
 		}//end for j. baseball. init.
 
-		/*
-		for (int b = 0; b < baseball.size(); b++) {
-			if (arr_chk[b][combi[i]][0] == baseball[b][1] && arr_chk[b][combi[i]][1] == baseball[b][2]) {
-				//printf("combi:%d\n",combi[i]);
-			
-			}
-			else answer++;
-		}
-		*/
+		
 
 	}//end for i
 	return answer;
@@ -145,7 +101,6 @@ int main() {
 	int tmp;
 	for(int i=0;i<12;i++){
 		scanf("%d", &tmp);
-		//if (tmp == NULL) { break; }
 		tmp1.push_back(tmp);
 	}
 	for (int j = 0; j < tmp1.size(); j+=3) {
@@ -156,14 +111,5 @@ int main() {
 		num_tmp1.clear();
 	}
 	printf("%d",solution(num_tmp2));
-	/*
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 3; j++) {
-			printf("%d ",num_tmp2[i][j]);
-		}
-		printf("\n");
-	}*/
-
-
 	return 0;
 }
