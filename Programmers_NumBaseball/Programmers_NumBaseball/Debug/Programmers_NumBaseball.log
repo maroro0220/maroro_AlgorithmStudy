@@ -1,0 +1,8 @@
+﻿  Programmers_NumBaseball.cpp
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_NumBaseball\Programmers_NumBaseball\Programmers_NumBaseball.cpp(39,20): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_NumBaseball\Programmers_NumBaseball\Programmers_NumBaseball.cpp(94,20): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_NumBaseball\Programmers_NumBaseball\Programmers_NumBaseball.cpp(96,21): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_NumBaseball\Programmers_NumBaseball\Programmers_NumBaseball.cpp(151,20): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_NumBaseball\Programmers_NumBaseball\Programmers_NumBaseball.cpp(147,1): warning C4996:  'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\stdio.h(1274): message :  'scanf' 선언을 참조하십시오.
+  Programmers_NumBaseball.vcxproj -> C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_NumBaseball\Debug\Programmers_NumBaseball.exe
