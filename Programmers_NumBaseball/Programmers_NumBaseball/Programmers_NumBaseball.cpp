@@ -43,7 +43,7 @@ int Permutation() {/* Permutation https://hahaite.tistory.com/294 */
 			cnt++;
 		}
 		combi.push_back(tmp_num);
-		reverse(comb_tmp.begin() + 3, comb_tmp.end());
+		reverse(comb_tmp.begin() + 2, comb_tmp.end());
 		if (!next_permutation(comb_tmp.begin(), comb_tmp.end()))break;
 	}
 	
