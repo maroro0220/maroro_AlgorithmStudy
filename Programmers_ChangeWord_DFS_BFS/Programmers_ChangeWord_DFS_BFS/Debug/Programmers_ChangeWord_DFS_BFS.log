@@ -1,0 +1,5 @@
+﻿  Programmers_ChangeWord_DFS_BFS.cpp
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_ChangeWord_DFS_BFS\Programmers_ChangeWord_DFS_BFS\Programmers_ChangeWord_DFS_BFS.cpp(19,19): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_ChangeWord_DFS_BFS\Programmers_ChangeWord_DFS_BFS\Programmers_ChangeWord_DFS_BFS.cpp(22,24): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_ChangeWord_DFS_BFS\Programmers_ChangeWord_DFS_BFS\Programmers_ChangeWord_DFS_BFS.cpp(75,7): warning C4101:  'tmp' :참조되지 않은 지역 변수입니다.
+  Programmers_ChangeWord_DFS_BFS.vcxproj -> C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_ChangeWord_DFS_BFS\Debug\Programmers_ChangeWord_DFS_BFS.exe
