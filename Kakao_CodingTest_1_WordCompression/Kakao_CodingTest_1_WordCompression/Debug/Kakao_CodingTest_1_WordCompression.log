@@ -1,0 +1,6 @@
+﻿  Kakao_CodingTest1_WordCompression.cpp
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Kakao_CodingTest_1_WordCompression\Kakao_CodingTest_1_WordCompression\Kakao_CodingTest1_WordCompression.cpp(10,20): warning C4018:  '<=': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Kakao_CodingTest_1_WordCompression\Kakao_CodingTest_1_WordCompression\Kakao_CodingTest1_WordCompression.cpp(16,17): warning C4018:  '>': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Kakao_CodingTest_1_WordCompression\Kakao_CodingTest_1_WordCompression\Kakao_CodingTest1_WordCompression.cpp(18,25): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Kakao_CodingTest_1_WordCompression\Kakao_CodingTest_1_WordCompression\Kakao_CodingTest1_WordCompression.cpp(24,39): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
+  Kakao_CodingTest_1_WordCompression.vcxproj -> C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Kakao_CodingTest_1_WordCompression\Debug\Kakao_CodingTest_1_WordCompression.exe
