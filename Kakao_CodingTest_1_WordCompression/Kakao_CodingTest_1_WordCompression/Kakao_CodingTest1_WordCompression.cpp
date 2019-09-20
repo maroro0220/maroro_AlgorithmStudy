@@ -34,6 +34,7 @@ int solution(string s) {
 					break;
 				}
 			}//end while
+
 			if (!cnt || cnt == 1) {
 				stmp += sind;
 			}
