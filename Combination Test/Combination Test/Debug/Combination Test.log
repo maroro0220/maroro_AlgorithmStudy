@@ -1,0 +1,4 @@
+﻿  Combination Test.cpp
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Combination Test\Combination Test\Combination Test.cpp(13,31): warning C4244:  '+=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Combination Test\Combination Test\Combination Test.cpp(41,20): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
+  Combination Test.vcxproj -> C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Combination Test\Debug\Combination Test.exe
