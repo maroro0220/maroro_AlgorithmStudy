@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BOJ_11726_2xN tile", "BOJ_11726_2xN tile\BOJ_11726_2xN tile.vcxproj", "{CB400958-D782-45ED-8823-40BE8724B7C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB400958-D782-45ED-8823-40BE8724B7C5}.Debug|x64.ActiveCfg = Debug|x64
+		{CB400958-D782-45ED-8823-40BE8724B7C5}.Debug|x64.Build.0 = Debug|x64
+		{CB400958-D782-45ED-8823-40BE8724B7C5}.Debug|x86.ActiveCfg = Debug|Win32
+		{CB400958-D782-45ED-8823-40BE8724B7C5}.Debug|x86.Build.0 = Debug|Win32
+		{CB400958-D782-45ED-8823-40BE8724B7C5}.Release|x64.ActiveCfg = Release|x64
+		{CB400958-D782-45ED-8823-40BE8724B7C5}.Release|x64.Build.0 = Release|x64
+		{CB400958-D782-45ED-8823-40BE8724B7C5}.Release|x86.ActiveCfg = Release|Win32
+		{CB400958-D782-45ED-8823-40BE8724B7C5}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F58FE645-020E-4AF1-A8CA-8F69ECEE5B7F}
+	EndGlobalSection
+EndGlobal
