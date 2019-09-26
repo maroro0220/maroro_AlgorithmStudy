@@ -1,5 +1,0 @@
-﻿  KaKao_CodingTest20190907_4_FindWord.cpp
-C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Kakao_CodingTest20190907_2_FindWord\Kakao_CodingTest20190907_2_FindWord\KaKao_CodingTest20190907_4_FindWord.cpp(8,20): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Kakao_CodingTest20190907_2_FindWord\Kakao_CodingTest20190907_2_FindWord\KaKao_CodingTest20190907_4_FindWord.cpp(11,21): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Kakao_CodingTest20190907_2_FindWord\Kakao_CodingTest20190907_2_FindWord\KaKao_CodingTest20190907_4_FindWord.cpp(20,20): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
-  Kakao_CodingTest20190907_2_FindWord.vcxproj -> C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Kakao_CodingTest20190907_2_FindWord\Debug\Kakao_CodingTest20190907_4_FindWord.exe
