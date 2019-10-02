@@ -1,0 +1,5 @@
+﻿  BOJ_1260_DFS,BFS Basic.cpp
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BOJ_1260_DFS,BFS Basic\BOJ_1260_DFS,BFS Basic\BOJ_1260_DFS,BFS Basic.cpp(14,19): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BOJ_1260_DFS,BFS Basic\BOJ_1260_DFS,BFS Basic\BOJ_1260_DFS,BFS Basic.cpp(29,21): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BOJ_1260_DFS,BFS Basic\BOJ_1260_DFS,BFS Basic\BOJ_1260_DFS,BFS Basic.cpp(71,9): warning C4778:  'printf' : 서식 문자열 '%\n'이(가) 종결되지 않았습니다.
+  BOJ_1260_DFS,BFS Basic.vcxproj -> C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BOJ_1260_DFS,BFS Basic\Debug\BOJ_1260_DFS,BFS Basic.exe
