@@ -1,0 +1,4 @@
+﻿  BOJ_2331_RepeatingSequence.cpp
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BOJ_2331_RepeatingSequence\BOJ_2331_RepeatingSequence\BOJ_2331_RepeatingSequence.cpp(20,20): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BOJ_2331_RepeatingSequence\BOJ_2331_RepeatingSequence\BOJ_2331_RepeatingSequence.cpp(21,24): warning C4244:  '+=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  BOJ_2331_RepeatingSequence.vcxproj -> C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BOJ_2331_RepeatingSequence\Debug\BOJ_2331_RepeatingSequence.exe
