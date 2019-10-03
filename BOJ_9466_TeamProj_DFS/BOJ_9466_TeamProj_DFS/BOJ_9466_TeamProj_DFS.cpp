@@ -39,12 +39,12 @@ int main() {
 				if (dfs(stud[i])) {
 					//continue;
 				}
-				else chk[i] = 0;
+				else chk[i] = 2;
 			}
 		}
 		int cnt = 0;
 		for (int i = 1; i <= n; i++) {
-			if (!chk[i]) {
+			if (chk[i]==2) {
 				cnt++;
 			}
 		}
