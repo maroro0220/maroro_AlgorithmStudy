@@ -7,6 +7,7 @@ int N, K,Max; //N=Subin, K=sister
 int cnt;
 queue<int>q;
 vector<int>chk;
+/*
 void bfs() {
 	q.push(N);
 	cnt = 0;
@@ -32,12 +33,52 @@ void bfs() {
 	}
 	
 
+}*/
+struct qu{
+	int posi, cnt;
+};
+queue<qu>quu;
+qu tmp;
+void bfs() {
+	//queue<pair<int, int>> q;
+	//q.push(pair<int,int>(N,0));
+
+	tmp.posi = N;
+	tmp.cnt = 0;
+	quu.push(tmp);
+	while (!quu.empty()) {
+		tmp = quu.front(); quu.pop();
+		if (tmp.posi == K) return;
+		if (!chk[tmp.posi - 1] && (tmp.posi - 1) >= 0 && (tmp.posi - 1) <= 100000) {
+			chk[tmp.posi - 1] = 1;
+			qu tmp1 = tmp;
+			tmp1.posi--;
+			tmp1.cnt++;
+			quu.push(tmp1);
+		}
+		if (!chk[tmp.posi + 1] && (tmp.posi + 1) >= 0 && (tmp.posi + 1) <= 100000) {
+			chk[tmp.posi + 1] = 1;
+			qu tmp2 = tmp;
+			tmp2.posi++;
+			tmp2.cnt++;
+			quu.push(tmp2);
+		}
+		if (!chk[tmp.posi *2] && (tmp.posi*2) >= 0 && (tmp.posi *2) <= 100000) {
+			chk[tmp.posi*2] = 1;
+			qu tmp3 = tmp;
+			tmp3.posi*=2;
+			tmp3.cnt++;
+			quu.push(tmp3);
+		}
+	}
+
 }
 int main() {
 	cin >> N >> K;
 	Max = abs(N - K);
 	chk = vector<int>(100000,0);
 	bfs();
-	cout << cnt;
+	//cout << cnt;
+	cout << tmp.cnt;
 	return 0;
 }
