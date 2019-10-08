@@ -32,7 +32,7 @@ void bfs() {
 	q.push(prime[0]);
 		while (!q.empty()) {
 			int s = q.size();
-			for (int i = 0; i <s; ++i) {
+			for (int i = 0; i <s; ++i) { //if i<q.size(), there is a error. Bcuz q size is changed every term. q.push()
 				
 				int cur = q.front(); q.pop();
 				//if (chk[cur]==1) continue;
