@@ -1,0 +1,5 @@
+﻿  BOJ_1644_PrimeContinuousSum_BF.cpp
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BOJ_1644_PrimeContinuousSum_BF\BOJ_1644_PrimeContinuousSum_BF\BOJ_1644_PrimeContinuousSum_BF.cpp(26,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BOJ_1644_PrimeContinuousSum_BF\BOJ_1644_PrimeContinuousSum_BF\BOJ_1644_PrimeContinuousSum_BF.cpp(35,49): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BOJ_1644_PrimeContinuousSum_BF\BOJ_1644_PrimeContinuousSum_BF\BOJ_1644_PrimeContinuousSum_BF.cpp(45,28): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  BOJ_1644_PrimeContinuousSum_BF.vcxproj -> C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BOJ_1644_PrimeContinuousSum_BF\Debug\BOJ_1644_PrimeContinuousSum_BF.exe
