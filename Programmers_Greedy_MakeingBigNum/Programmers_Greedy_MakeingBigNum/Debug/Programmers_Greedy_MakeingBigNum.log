@@ -1,0 +1,4 @@
+﻿  Programmers_Greedy_MakeingBigNum.cpp
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_Greedy_MakeingBigNum\Programmers_Greedy_MakeingBigNum\Programmers_Greedy_MakeingBigNum.cpp(12,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_Greedy_MakeingBigNum\Programmers_Greedy_MakeingBigNum\Programmers_Greedy_MakeingBigNum.cpp(23,11): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+  Programmers_Greedy_MakeingBigNum.vcxproj -> C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_Greedy_MakeingBigNum\Debug\Programmers_Greedy_MakeingBigNum.exe
