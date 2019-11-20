@@ -3,43 +3,46 @@
 
 using namespace std;
 
-vector<vector<int>>dp;
-/*
+//vector<vector<int>>dp;
+int dp[101][101][10000];
 int mm, nn;
-int dr[4] = { -1,1,0,0 };
-int dc[4] = { 0,0,-1,1 };
-int dfs(int r,int c) {
-	if (dp[r][c]) { return dp[r][c]; }
-	if (c == mm && r == nn) { 
+int dr[4] = { 1,0,-1,0 };
+int dc[4] = { 0,1,0,-1 };
+int dfs(int r,int c,int cnt) {
+	if (dp[r][c][cnt]) { return dp[r][c][cnt]; }
+
+	if (c == mm && r == nn ) {
 		return 1; 
 	}
+	if (cnt == nn + mm - 2) return 0;
+
 	else {
 		int next_r, next_c;
 		for (int i = 0; i < 4; i++) {
 			next_r = r + dr[i];
 			next_c = c + dc[i];
-			if ( next_r>nn||next_c>mm||next_r<1||next_c<1) {
+			if ( next_r>nn || next_c>mm || next_r<1 || next_c<1) {
 				continue; 
 			}
-			if (dp[next_r][next_c] == -1) continue;
-			dp[r][c]+=dfs(next_r,next_c);
+			if (dp[next_r][next_c][cnt+1] == -1) continue;
+			dp[r][c][cnt]+=dfs(next_r,next_c,cnt+1);
 		}
 	}
-	return dp[r][c];
+	return dp[r][c][cnt]%1000000007;
 }
 int solution(int m, int n, vector<vector<int>> puddles) {
 	int answer = 0;
 	mm = m; nn = n;
-	dp = vector<vector<int>>(n+1, vector<int>(m+1,0));
+	//dp = vector<vector<int>>(n+1, vector<int>(m+1,0));
 	for (int i = 0; i < puddles.size(); i++) {
-		dp[puddles[i][0]][puddles[i][1]] = -1;
+		for(int j=0;j<=m+n;j++)
+		dp[puddles[i][0]][puddles[i][1]][j] = -1;
 	}
-	dfs(1, 1);
-	answer = dp[1][1];
+	dfs(1, 1,0);
+	answer = dp[1][1][0];
 	return answer;
 }
-*/
-
+/* Dynamic Programming
 int solution(int m, int n, vector<vector<int>> puddles) {
 	int answer = 0;
 	dp = vector<vector<int>>(n+1, vector<int>(m+1, 0));
@@ -57,7 +60,7 @@ int solution(int m, int n, vector<vector<int>> puddles) {
 	}
 	answer = dp[n][m];
 	return answer;
-}
+}*/
 int main() {
 	printf("%d\n", solution(4, 3, { {2,2} }));//4
 	return 0;
