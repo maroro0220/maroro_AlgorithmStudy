@@ -6,8 +6,8 @@ using namespace std;
 //vector<vector<int>>dp;
 int dp[101][101][10000];
 int mm, nn;
-int dr[4] = { 1,0,-1,0 };
-int dc[4] = { 0,1,0,-1 };
+int dr[2] = { 1,0};
+int dc[2] = { 0,1};
 int dfs(int r,int c,int cnt) {
 	if (dp[r][c][cnt]) { return dp[r][c][cnt]; }
 
@@ -18,7 +18,7 @@ int dfs(int r,int c,int cnt) {
 
 	else {
 		int next_r, next_c;
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < 2; i++) {
 			next_r = r + dr[i];
 			next_c = c + dc[i];
 			if ( next_r>nn || next_c>mm || next_r<1 || next_c<1) {
