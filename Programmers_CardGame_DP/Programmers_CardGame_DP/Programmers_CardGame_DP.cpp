@@ -1,42 +1,31 @@
 #include <string>
 #include <vector>
 #include<algorithm>
+#include<iostream>
 using namespace std;
-int Find(vector<int> card) {
-	int maxi=0,maxi_idx=0;
-	for (int i = 0; i < card.size(); i++) {
-		if (maxi < card[i]) { maxi = card[i]; maxi_idx = i; }
-	}
-	return maxi_idx;
-}
+vector<vector<int>>dp;
 int solution(vector<int> left, vector<int> right) {
 	int answer = 0;
-	//sort(left.begin(), left.end(), greater<int>());//Descending order
-	//int left_max = left[0];
-	int left_max_idx = Find(left);
-	for (int i = 0; i < right.size(); i++) {
-		if (left[left_max_idx] > right[i]) { 
-			answer += right[i]; 
-		}
-		else {
-			left[left_max_idx] = 0; right[i] = 0;
-			left_max_idx = Find(left);
-		}
-	}
-	/*
-	int l_idx =0, r_idx = 0;
+	dp = vector<vector<int>>(left.size() + 1, vector<int>(right.size() + 1, 0));
 
-	while (l_idx < left.size() && r_idx < right.size()) {
-		if (left[l_idx] > right[r_idx]) {
-			answer += right[r_idx];
-			right[r_idx] = 0;
-			r_idx++;
+	//for (int i = 1; i <= left.size() + 1; i++) {	dp[0][i] = -1;}
+	for (int i = 0; i < left.size(); i++) {
+		for (int j = 0; j < right.size(); j++) {
+			//cout << "i: " << i << "j: " <<j<< endl;
+			//cout << "before dp i+1 j+1 => dp[i][j]:" << dp[i][j] << ' ' << endl;
+			dp[i + 1][j + 1] = max(dp[i][j + 1], dp[i][j]);
+			//cout << "1after dp i+1 j+1: " << dp[i + 1][j + 1] << endl;
+			if (left[i] > right[j]) {
+				dp[i + 1][j + 1] = dp[i + 1][j] + right[j];
+			}
+			//cout << "2after dp i+1 j+1: " << dp[i + 1][j + 1] << endl;
+
 		}
-		else {
-			left[l_idx] = 0; l_idx++;
-		}
+		cout << endl;
 	}
-	*/
+	for (int i = 0; i < right.size() + 1; i++) {
+		if (answer < dp[left.size()][i]) answer = dp[left.size()][i];
+	}
 	return answer;
 }
 

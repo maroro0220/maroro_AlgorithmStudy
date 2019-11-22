@@ -1,4 +1,5 @@
 ﻿  Programmers_CardGame_DP.cpp
-C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_CardGame_DP\Programmers_CardGame_DP\Programmers_CardGame_DP.cpp(7,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_CardGame_DP\Programmers_CardGame_DP\Programmers_CardGame_DP.cpp(17,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_CardGame_DP\Programmers_CardGame_DP\Programmers_CardGame_DP.cpp(12,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_CardGame_DP\Programmers_CardGame_DP\Programmers_CardGame_DP.cpp(13,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_CardGame_DP\Programmers_CardGame_DP\Programmers_CardGame_DP.cpp(26,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   Programmers_CardGame_DP.vcxproj -> C:\Users\test\source\repos\study\maroro_AlgorithmStudy\Programmers_CardGame_DP\Debug\Programmers_CardGame_DP.exe
