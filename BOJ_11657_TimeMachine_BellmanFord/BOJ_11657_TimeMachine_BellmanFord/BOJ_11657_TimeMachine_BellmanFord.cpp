@@ -1,3 +1,4 @@
+
 #include<iostream>
 #include<vector>
 const int INF= 0x7FFFFFFF;
@@ -20,7 +21,6 @@ int main() {
 		}
 	}
 	dist[1] = 0;
-	bool chk = false;
 	for (int i = 0; i < N; i++) {
 		for (int s = 1; s <= N; s++) {//Find way
 			for (int d = 1; d <= N; d++) {
@@ -28,21 +28,18 @@ int main() {
 					if (dist[d] > dist[s] + city[s][d]) {
 						dist[d] = dist[s] + city[s][d];
 						if (i ==N-1) {
-							chk = true;
-							//cout << -1 ;
-							//return 0;
+							cout << -1 ;
+							return 0;
 						}
 					}
 				}
 			}
 		}
 	}
-	if(chk) cout << -1;
-	else {
+
 		for (int i = 2; i <= N; i++) {
 			if (dist[i] == INF) cout << -1 << endl;
 			else cout << dist[i] << endl;
 		}
-	}
 	return 0;
 }
