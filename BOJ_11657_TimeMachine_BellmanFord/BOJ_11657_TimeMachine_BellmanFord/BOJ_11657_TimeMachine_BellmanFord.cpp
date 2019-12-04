@@ -10,7 +10,14 @@ int main() {
 	vector<int> dist(N + 1, INF);
 	while (M--) {
 		cin >> A >> B >> C;
-		city[A][B] = C;
+		if (city[A][B] == INF) {
+			city[A][B] = C;
+		}
+		else {
+			if (city[A][B] > C) {
+				city[A][B] = C;
+			}
+		}
 	}
 	dist[1] = 0;
 	bool chk = false;
