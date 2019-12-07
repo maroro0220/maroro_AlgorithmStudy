@@ -28,7 +28,7 @@ int main() {
 	}
 	priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
 	vector<int>dist(V + 1, INF);
-	pq.push({ 0,K }); //K's weight, start point
+	pq.push({ 0,K }); //K's weight, start point K
 	dist[K] = 0;
 	while (!pq.empty()) {
 		int cur_weight = pq.top().first;

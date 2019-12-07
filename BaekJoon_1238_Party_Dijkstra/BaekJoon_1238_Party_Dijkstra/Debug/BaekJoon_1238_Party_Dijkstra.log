@@ -1,0 +1,5 @@
+﻿  BaekJoon_1238_Party_Dijkstra.cpp
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BaekJoon_1238_Party_Dijkstra\BaekJoon_1238_Party_Dijkstra\BaekJoon_1238_Party_Dijkstra.cpp(24,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BaekJoon_1238_Party_Dijkstra\BaekJoon_1238_Party_Dijkstra\BaekJoon_1238_Party_Dijkstra.cpp(42,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BaekJoon_1238_Party_Dijkstra\BaekJoon_1238_Party_Dijkstra\BaekJoon_1238_Party_Dijkstra.cpp(63,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  BaekJoon_1238_Party_Dijkstra.vcxproj -> C:\Users\test\source\repos\study\maroro_AlgorithmStudy\BaekJoon_1238_Party_Dijkstra\Debug\BaekJoon_1238_Party_Dijkstra.exe
