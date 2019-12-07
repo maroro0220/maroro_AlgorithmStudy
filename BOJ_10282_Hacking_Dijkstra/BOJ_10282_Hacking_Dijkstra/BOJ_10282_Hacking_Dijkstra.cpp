@@ -52,7 +52,9 @@ int main() {
 		for (int i = 0; i < d; i++) {
 			int a, b, c;
 			cin >> a >> b >> c;
-			g[b].push_back({ c,a });
+			//g[b].push_back({ c,a });
+			Ver tmp; tmp.sec = c,tmp.com=a;
+			g[b].push_back(tmp);
 		}
 		Dijkstra_Func(g, n, d, com);
 	}
