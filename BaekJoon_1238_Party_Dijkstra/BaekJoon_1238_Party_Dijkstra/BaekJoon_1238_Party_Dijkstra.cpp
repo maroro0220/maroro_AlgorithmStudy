@@ -50,7 +50,8 @@ void Dijkstra(vector<Dijk> city[],int n,int m,int x) {
 			}
 		}
 	}
-	
+	/*
+	//use it when you try N time Dijkstra
 	if (x==X ) {
 		for (int i = 1; i < dist.size(); i++) {
 				res[i] += dist[i];
@@ -60,31 +61,30 @@ void Dijkstra(vector<Dijk> city[],int n,int m,int x) {
 	else {
 		res[x] += dist[X];
 	}
-	/*
+	*/
 	for (int i = 1; i < dist.size(); i++) {
 		res[i] += dist[i];
 	}
-	*/
 }
 int main() {
 	cin >> N >> M >> X;
 	res.assign(N + 1, 0);
-//	Dijkstra(N, M, X);
-	//Dijk tmp2;
+	Dijk tmp2;
 	for (int i = 0; i < M; i++) {
 		cin >> s >> d >> t;
 		tmp.point = d; tmp.time = t;
-	//	tmp2.point = s, tmp2.time = t;
+		tmp2.point = s, tmp2.time = t;
 		cityo[s].push_back(tmp);
-	//	cityr[d].push_back(tmp2);
+		cityr[d].push_back(tmp2);
 	}
-	//Dijkstra(cityo, N, M, X);
-	//Dijkstra(cityr, N, M, X);
-
+	Dijkstra(cityo, N, M, X);
+	Dijkstra(cityr, N, M, X);
+	/*
+	//N time Dijkstra
 	for (int i = 1; i <= N; i++) {
 		Dijkstra(cityo,N, M, i);
 	}
-
+	*/
 	cout<<FindFar(res);
 	return 0;
 }
