@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BaekJoon_1992_QuadTree_DivideNConqure", "BaekJoon_1992_QuadTree_DivideNConqure\BaekJoon_1992_QuadTree_DivideNConqure.vcxproj", "{CD640685-160E-4EC2-B624-9C19BD29E1AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD640685-160E-4EC2-B624-9C19BD29E1AD}.Debug|x64.ActiveCfg = Debug|x64
+		{CD640685-160E-4EC2-B624-9C19BD29E1AD}.Debug|x64.Build.0 = Debug|x64
+		{CD640685-160E-4EC2-B624-9C19BD29E1AD}.Debug|x86.ActiveCfg = Debug|Win32
+		{CD640685-160E-4EC2-B624-9C19BD29E1AD}.Debug|x86.Build.0 = Debug|Win32
+		{CD640685-160E-4EC2-B624-9C19BD29E1AD}.Release|x64.ActiveCfg = Release|x64
+		{CD640685-160E-4EC2-B624-9C19BD29E1AD}.Release|x64.Build.0 = Release|x64
+		{CD640685-160E-4EC2-B624-9C19BD29E1AD}.Release|x86.ActiveCfg = Release|Win32
+		{CD640685-160E-4EC2-B624-9C19BD29E1AD}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5404974B-EFB7-4F7C-AC0D-BBA211F2F735}
+	EndGlobalSection
+EndGlobal
