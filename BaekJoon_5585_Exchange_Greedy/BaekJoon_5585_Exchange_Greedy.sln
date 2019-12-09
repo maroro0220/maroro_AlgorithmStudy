@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BaekJoon_5585_Exchange_Greedy", "BaekJoon_5585_Exchange_Greedy\BaekJoon_5585_Exchange_Greedy.vcxproj", "{EE49066D-1709-4CE5-BCC1-202ADE87B9B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE49066D-1709-4CE5-BCC1-202ADE87B9B0}.Debug|x64.ActiveCfg = Debug|x64
+		{EE49066D-1709-4CE5-BCC1-202ADE87B9B0}.Debug|x64.Build.0 = Debug|x64
+		{EE49066D-1709-4CE5-BCC1-202ADE87B9B0}.Debug|x86.ActiveCfg = Debug|Win32
+		{EE49066D-1709-4CE5-BCC1-202ADE87B9B0}.Debug|x86.Build.0 = Debug|Win32
+		{EE49066D-1709-4CE5-BCC1-202ADE87B9B0}.Release|x64.ActiveCfg = Release|x64
+		{EE49066D-1709-4CE5-BCC1-202ADE87B9B0}.Release|x64.Build.0 = Release|x64
+		{EE49066D-1709-4CE5-BCC1-202ADE87B9B0}.Release|x86.ActiveCfg = Release|Win32
+		{EE49066D-1709-4CE5-BCC1-202ADE87B9B0}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBA9B3A9-3E60-4239-9506-F77A9D4F6D7F}
+	EndGlobalSection
+EndGlobal
