@@ -22,16 +22,6 @@ void Bellman(vector<Edge>& m) {
 		}
 	}
 	res += dist[v];
-	for (int i = v; i !=1; ) {
-	for (int j = 0; j < m.size(); j++) {
-		int start = m[j].s, desti = m[j].d, w = m[j].w;
-		
-			if (chk[i] != 1 && chk[i] == desti && desti != v) {
-				m[j].d = 0;
-				i = chk[i];
-			}
-		}
-	}
 }
 int main() {
 
