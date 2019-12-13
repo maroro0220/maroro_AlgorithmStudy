@@ -35,6 +35,19 @@ int solution(vector<int> priorities, int location) {
 
 
 int main() {
+	/*
 	cout<<solution({ 2, 1, 3, 2 }, 2)<<'\n';
 	cout<<solution({ 1, 1, 9, 1, 1, 1 }, 0);
-	return 0; }
+	*/
+	int T, N, M;
+	cin >> T;
+	while (T--) {
+		cin >> N >> M;
+		vector<int>arr(N);
+		for (int i = 0; i < N; i++) {
+			cin >> arr[i];
+		}
+		cout<<solution(arr, M)<<'\n';
+	}
+	return 0; 
+}
