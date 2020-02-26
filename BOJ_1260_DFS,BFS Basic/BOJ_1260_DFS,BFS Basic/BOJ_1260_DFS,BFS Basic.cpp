@@ -1,4 +1,4 @@
-#include<iostream>
+/*#include<iostream>
 #include<vector>
 #include<queue>
 #include<algorithm>
@@ -36,7 +36,7 @@ void bfs(int v) {
 		}
 	}
 
-
+	*/
 
 	/*
 	int tmp;
@@ -54,7 +54,7 @@ void bfs(int v) {
 		b.pop();
 
 	}
-	*/
+	*//*
 }
 int main() {
 	cin >> N >> M >> V;
@@ -70,6 +70,58 @@ int main() {
 	dfs(V);
 	printf("\n");
 	chkb.clear();
+	bfs(V);
+	return 0;
+}
+*/
+#include<vector>
+#include<queue>
+#include<iostream>
+#include<algorithm>
+using namespace std;
+vector<vector<int>> d(1001);
+queue<int> q;
+vector<int>chk;
+void dfs(int v) {
+	chk[v] = 1;
+	printf("%d ", v);
+	for (int i = 0; i < d[v].size(); i++) {
+		if (!chk[d[v][i]]) {
+			dfs(d[v][i]);
+		}
+	}
+}
+void bfs(int v) {
+	q.push(v);
+	chk[v] = 1;
+	while (!q.empty()) {
+		int s = q.front();
+		q.pop();
+		printf("%d ", s);
+		for (int i = 0; i < d[s].size(); i++) {
+			if (chk[d[s][i]]) {
+				continue;
+			}
+			q.push(d[s][i]);
+			chk[d[s][i]] = 1;
+		}
+	}
+}
+int main() {
+	int n, m, V, a, b;
+	cin >> n >> m >> V;
+	chk = vector<int>(n+1);
+	for (int i = 0; i < m; i++) {
+		cin >> a >> b;
+		d[a].push_back(b);
+		d[b].push_back(a);
+	}
+	for (int j = 1; j <= n; j++) {
+		sort(d[j].begin(), d[j].end());
+	}
+	dfs(V);
+	chk = vector<int>(n + 1);
+	printf("\n");
 	bfs(V);
 	return 0;
 }
