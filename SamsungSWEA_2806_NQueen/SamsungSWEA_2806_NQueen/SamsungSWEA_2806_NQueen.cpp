@@ -6,8 +6,30 @@ using namespace std;
 vector<vector<int>> map;
 int N;
 int cnt;
-int dy[6] = {0,0,-1,-1,+1,+1};
-int dx[6] = {-1,+1,-1,+1,-1,+1};
+vector<int>row;
+
+bool Chk(int r) {
+	for (int j = 0; j < r; j++) {//j<r enough. because over r is not yet. It doesn't need care about over r.
+		if (abs(row[r] - row[j]) == (r - j) || row[r] == row[j]) { //col==row || same col line
+			return false;
+		}
+	}
+	return true;
+}
+void Queen(int r) {
+	if (r == N) {
+		cnt++;
+		return;
+	}
+	else {
+		for (int i = 0; i < N; i++) {
+			row[r] = i;
+			if (Chk(r)) {
+				Queen(r + 1);
+			}
+		}
+	}
+}/*
 bool chk(int r,int c,vector<vector<int>> mm) {
 	int rtmp,ctmp;
 	for (int i = 0; i < N; i++) {
@@ -60,7 +82,6 @@ bool chk(int r,int c,vector<vector<int>> mm) {
 	}
 	return true;
 }
-
 void dfs(int r,vector<vector<int>> m) {
 	if (r == N) {
 		cnt++;
@@ -83,6 +104,7 @@ void dfs(int r,vector<vector<int>> m) {
 	return;
 	}
 }
+*/
 int main(int argc, char** argv)
 {
 	int test_case;
@@ -92,9 +114,9 @@ int main(int argc, char** argv)
 	{
 		cin >> N;
 		map = vector<vector<int>>(N, vector<int>(N, 0));
-
-		dfs(0,map);
-
+		row = vector<int>(N, 0);
+		//dfs(0,map);
+		Queen(0);
 		cout << '#' << test_case << ' ' << cnt << endl;
 		cnt = 0;
 	}
