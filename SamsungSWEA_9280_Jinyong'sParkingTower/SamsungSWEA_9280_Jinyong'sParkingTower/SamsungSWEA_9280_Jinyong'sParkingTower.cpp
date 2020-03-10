@@ -42,14 +42,13 @@ int main(int argc, char** argv)
 					}
 					
 				}
-			}
+			} 
 			else {
 				tmp *= -1;
 				for (int i = 0; i < n; i++) {
 					if (chk[i] == tmp) {
 						chk[i] = 0;
 						cnt++;
-					//	cout << "cnt "<<cnt<<endl;
 						if (!q.empty()) {
 							chk[i] = q.front();
 							res += car[q.front() - 1] * space[i];
