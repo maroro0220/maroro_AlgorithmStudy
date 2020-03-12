@@ -6,7 +6,18 @@ using namespace std;
 vector<int>seq,chk;
 int N, K,cnt;
 void dfs(int idx, int sum) {
-	if (K == sum) {
+	/*
+	//otherpeople's 
+	
+	if (idx >= N) { return; }
+	if (K == sum+seq[idx]) {
+		cnt++;
+	}
+	dfs(idx + 1, sum);
+	dfs(idx + 1, sum+seq[idx]);
+	*/
+	
+		if (K == sum) {
 		cnt++;
 		return;
 	}
@@ -24,6 +35,7 @@ void dfs(int idx, int sum) {
 			}
 		}
 	}
+	
 }
 int main(int argc, char** argv)
 {
