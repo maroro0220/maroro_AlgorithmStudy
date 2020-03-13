@@ -64,7 +64,7 @@ int main(int argc, char** argv)
 					}
 				}
 			}
-		//	Pmap();
+			//Pmap();
 			size=qs.size();
 			cnt++;
 			for (int j = 0; j < size; j++) {
@@ -85,13 +85,16 @@ int main(int argc, char** argv)
 							//end
 							c = true;
 							res = cnt;
-							
+							break;
 							//cout << '#' << test_case << ' ' << cnt << endl;
 						}
 					}
 				}
+				if (c) break;
 			}
-		//	Pmap();
+			
+			//Pmap();
+			if (c) break;
 		}
 		if (c) {
 			cout << '#' << test_case << ' ' << res << endl;
