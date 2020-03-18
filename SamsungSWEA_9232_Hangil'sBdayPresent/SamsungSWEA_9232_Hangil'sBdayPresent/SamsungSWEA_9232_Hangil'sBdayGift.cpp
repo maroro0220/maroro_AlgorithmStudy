@@ -31,10 +31,10 @@ int main(int argc, char** argv)
 			cin >> disk;
 
 			for (; j > 0; ) {
-				if (j ==1) {
-					if (disk == hole[j]) res = 0;
-					else res = -1; 
-					break;
+				if (j <=1) {
+					if (disk <= hole[j] ) res = 0;
+					else { chk = false; res = -1; break;}
+					
 				}
 				if (hole[j] < disk) j--;
 				else if (hole[j] >= disk) {
@@ -42,11 +42,11 @@ int main(int argc, char** argv)
 					break;
 				}
 			}
-				res = --j;
-				
+			if (!chk) break;
+				res = --j;		
 		}
-		//res = (chk) ? res+1 : 0;
-		cout << '#' << test_case << ' ' << res+1 << endl;
+		res = (chk) ? res+1 : 0;
+		cout << '#' << test_case << ' ' << res << endl;
 
 
 	}
