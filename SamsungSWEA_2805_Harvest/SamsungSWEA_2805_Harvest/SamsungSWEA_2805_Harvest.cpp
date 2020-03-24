@@ -16,11 +16,9 @@ int main(int argc, char** argv)
 		int sum = 0;
 		scanf(" %d", &N);
 		vector<vector<int>>farm(N, vector<int>(N));
-		vector<vector<int>>chk(N, vector<int>(N,0));
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
 				scanf("%1d", &farm[i][j]);
-				//sum += farm[i][j];
 			}
 		}
 		//this is better
@@ -59,6 +57,7 @@ int main(int argc, char** argv)
 		*/
 		
 		/*
+		
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
 				printf("%d ", chk[i][j]);
