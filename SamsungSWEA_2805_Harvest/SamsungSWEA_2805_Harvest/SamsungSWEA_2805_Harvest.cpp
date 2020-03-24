@@ -23,6 +23,19 @@ int main(int argc, char** argv)
 				//sum += farm[i][j];
 			}
 		}
+		//this is better
+		for (int i = 0; i < N / 2; i++) {
+			sum += farm[i][N / 2];
+			sum += farm[N - 1 - i][N / 2];
+			for (int j = 1; j <= i; j++) {
+				sum += (farm[i][N / 2+j]+ farm[i][N / 2-j]);
+				sum += (farm[N - 1 - i][N / 2+j]+ farm[N - 1 - i][N / 2-j]);
+			}
+		}
+		for (int i = 0; i < N; i++) {
+			sum += farm[N / 2][i];
+		}
+		/*
 		for (int i = 0; i < N; i++) {
 			if (i < N / 2) {
 				sum += farm[i][N / 2];
@@ -43,6 +56,7 @@ int main(int argc, char** argv)
 				}
 			}
 		}
+		*/
 		
 		/*
 		for (int i = 0; i < N; i++) {
