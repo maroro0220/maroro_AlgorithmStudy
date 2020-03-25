@@ -23,6 +23,7 @@
     <ProjectGuid>{9FEF68CC-6E92-419C-AFB3-24DE611038FD}</ProjectGuid>
     <RootNamespace>BaekJoon7Dwarf</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>BaekJoon_2309_7Dwarf</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -123,7 +124,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BaekJoon_7Dwarf.cpp" />
+    <ClCompile Include="BaekJoon_2309_7Dwarf.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
