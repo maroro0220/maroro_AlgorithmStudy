@@ -1,3 +1,4 @@
+
 #include<vector>
 #include<iostream>
 
@@ -32,7 +33,8 @@ int main(int argc, char** argv)
 						break;
 					}
 					if (now == '+') {
-						while (ch.back() == '*') {
+
+						while (!ch.empty()&&ch.back() == '*') {
 							num.push_back(ch.back());
 							ch.pop_back();
 						}
@@ -41,10 +43,15 @@ int main(int argc, char** argv)
 				}
 			}
 			else if (tmp == '+') {
-				while (!ch.empty()&&ch.back() == '*') {
-					int now = ch.back();
-					ch.pop_back();
-					num.push_back(now);
+				if (ch.empty()) {
+					ch.push_back(tmp);
+					continue;
+				}
+				while (ch.back() == '+' || ch.back() == '*') {
+						int now = ch.back();
+						ch.pop_back();
+						num.push_back(now);
+						if (ch.empty())break;
 				}
 				ch.push_back(tmp);
 			}
