@@ -31,15 +31,17 @@ int main() {
 	int M, N;
 	scanf("%d", &N);
 	//vector<int>sang(N);
+	map<int, int>num;
 	int *sang = new int[N];
 	for (int i = 0; i < N; i++) {
 		scanf("%d", &sang[i]);
+		//num.insert({ sang[i],0 });//slow init map
 	}
 	sort(sang, sang + N);
 	//sort(sang.begin(), sang.end());
 	scanf("%d",&M);
 	int tmp;
-	
+	/*
 	int up, low;
 	for (int i = 0; i < M; i++) {
 		//cin >> tmp;
@@ -52,16 +54,15 @@ int main() {
 		}
 		printf("%d ", up-low );
 	}
-	
-	/*
+	*/
 	//slow
-	map<int, int>num;
 	//int tmp;
 	for (int i = 0; i < N; i++) {
-		num.insert({ sang[i],0 });
+		num.insert({ sang[i],0 });//fast init map
 	}
 	for (int i = 0; i < N; i++) {
-		num.find(sang[i])->second++;
+		num.find(sang[i])->second++;//fast
+		//num[sang[i]]++;//slow
 	}
 	for (int i = 0; i < M; i++) {
 		
@@ -69,6 +70,6 @@ int main() {
 		if (num.count(tmp))printf("%d ", num.find(tmp)->second);
 		else printf("0 ");
 	}
-	*/
+	
 	return 0;
 }
