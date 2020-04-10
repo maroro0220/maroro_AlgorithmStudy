@@ -6,7 +6,8 @@ vector<int> chk;
 int dfs(int idx) {
 	if (chk[idx]) return 0;
 	chk[idx] = 1;
-	int res=1;	for (int i = 0; i < pp[idx].size(); i++) {
+	int res=1;	
+	for (int i = 0; i < pp[idx].size(); i++) {
 		res += dfs(pp[idx][i]);
 		
 	}
