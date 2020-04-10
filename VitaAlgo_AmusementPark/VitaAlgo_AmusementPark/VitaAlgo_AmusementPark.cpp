@@ -32,11 +32,11 @@ int main() {
 		}
 	}
 	sum = 0;
-	for (int i = 0; i < n; i++) {
+	//for (int i = 0; i < n; i++) {
 		
-		start = i;
-		dfs(i,0);
-	}
+		start =0;
+		dfs(0,0);
+	//}
 	cout << mini;
 	return 0;
 }
