@@ -2,18 +2,21 @@
 
 using namespace std;
 int N, B,mini;
-/*
+
 //Time over
 void DFS(int idx,int cnt,int n, int* pep, int* chk,int sum) {
 	if (n == cnt) {
 		//printf("%d\n", sum);
+		//for (int i = 0; i < N; i++) {
+		//	printf("%d ", chk[i]);
+		//}
+		//printf("\n");
 		if (sum >= B) {
 			mini = mini < sum ? mini : sum;
 		}
 		return;
 	}
-	chk[idx] = 1;
-	for (int i = 0; i < N; i++) {
+	for (int i = idx; i < N; i++) {
 		if (chk[i])continue;
 		chk[i] = 1;
 		sum += pep[i];
@@ -25,7 +28,8 @@ void DFS(int idx,int cnt,int n, int* pep, int* chk,int sum) {
 
 	return;
 }
-*/
+
+/*
 void DFS(int cnt, int sum, int* pep) {
 	if (cnt == N) {
 		if (sum >= B && mini>sum) {
@@ -36,6 +40,7 @@ void DFS(int cnt, int sum, int* pep) {
 	DFS(cnt + 1, sum + pep[cnt], pep);
 	DFS(cnt + 1, sum , pep);
 }
+*/
 int main(int argc, char** argv)
 {
 	int test_case;
@@ -50,7 +55,16 @@ int main(int argc, char** argv)
 			cin >> people[i];
 			mini += people[i];
 		}
-		DFS(0, 0, people);
+
+		int* chk;
+		for (int i = 1; i <= N; i++) {
+			//for (int j = 0; j < N; j++) {
+				chk = new int[N]();
+				DFS(0, 0, i, people, chk, 0);
+			//}
+
+		}
+		//DFS(0, 0, people);
 		/*
 		for (int i = 1; i < (1 << N); i++) {
 			int sum = 0;
