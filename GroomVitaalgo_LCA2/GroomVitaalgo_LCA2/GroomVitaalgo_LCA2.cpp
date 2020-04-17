@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 vector<int> grap[100001];
-int ac[100001];
+int* ac;
 //vector<int>dep;
 int* dep;
 //int n;
@@ -16,18 +16,19 @@ void dfs(int now, int parent) {
 }
 int main() {
 	int a, b,m,n;
-	cin >> n;
+	scanf("%d", &n);
 	//dep = vector<int>(n + 1, 0);
+	ac = new int[n + 1]();
 	dep = new int[n + 1]();
 	for(int i=0;i<n-1;i++){
-		cin >> a >> b;
+		scanf("%d %d", &a, &b);
 		grap[a].push_back(b);
 		grap[b].push_back(a);
 	}
 	dfs(1, 0);
-	cin >> m;
+	scanf("%d", &m);
 	while(m--) {
-		cin >> a >> b;
+		scanf("%d %d", &a, &b);
 		if (dep[a] != dep[b]) {
 			if (dep[a] > dep[b]) swap(a, b);
 			while (dep[a]<dep[b])
