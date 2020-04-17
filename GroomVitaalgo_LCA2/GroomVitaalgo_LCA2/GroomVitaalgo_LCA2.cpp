@@ -10,7 +10,7 @@ void dfs(int now, int parent) {
 	dep[now] = dep[parent] + 1;
 	ac[now] = parent;
 	for (int i = 0; i < grap[now].size(); i++) {
-		if (grap[now][i] == parent) continue;
+		if (grap[now][i] == parent||dep[grap[now][i]]) continue;
 		dfs(grap[now][i], now);
 	}
 }
@@ -25,10 +25,16 @@ int main() {
 		grap[a].push_back(b);
 		grap[b].push_back(a);
 	}
+	dep[0] = -1;
 	dfs(1, 0);
 	scanf("%d", &m);
 	while(m--) {
+		int res;
 		scanf("%d %d", &a, &b);
+		if (a == 1 || b == 1) {
+			printf("1\n"); 
+			continue;
+		}
 		if (dep[a] != dep[b]) {
 			if (dep[a] > dep[b]) swap(a, b);
 			while (dep[a]<dep[b])
@@ -36,7 +42,8 @@ int main() {
 				b = ac[b];
 			}
 		}
-		int res;
+		res = a;
+
 		while (true) {
 			if (a == b) {
 				res = a;
@@ -45,6 +52,7 @@ int main() {
 			a = ac[a];
 			b = ac[b];
 		}
+		
 		printf("%d\n", res);
 	}
 	return 0;
