@@ -1,59 +1,81 @@
 #include <iostream>
 #include<vector>
+#include<queue>
 using namespace std;
-vector<int> grap[100001];
-int* ac;
-//vector<int>dep;
-int* dep;
-//int n;
-void dfs(int now, int parent) {
-	dep[now] = dep[parent] + 1;
-	ac[now] = parent;
-	for (int i = 0; i < grap[now].size(); i++) {
-		if (grap[now][i] == parent||dep[grap[now][i]]) continue;
-		dfs(grap[now][i], now);
+
+
+vector<int> grap[101010];
+int node[101010][18];
+int dep[101010];
+void bfs(int s) {
+	queue<int> q;
+	q.push(s);
+	dep[s] = 1;
+	while (!q.empty()) {
+		int now = q.front();
+		q.pop();
+		for (int i = 0; i < grap[now].size(); ++i) {
+			int nx = grap[now][i];
+			if (dep[nx] == 0) {
+				dep[nx] = dep[now] + 1;
+				node[nx][1] = now;
+				q.push(nx);
+			}
+		}
 	}
 }
+void getP(int n) {
+	for (int j = 2; (1 << j) <= n; ++j) {
+		for (int i = 1; i <= n ; ++i) {
+			if (node[i][j - 1] != 0)
+				node[i][j] = node[node[i][j - 1]][j - 1];
+		}
+	}
+}
+int LCA(int a, int b) {
+	if (dep[a] < dep[b]) swap(a, b);
+	if (dep[a] != dep[b]) {
+		for (int i = 18; i >= 1; --i) {
+			if (dep[a] - (1 << (i-1)) >= dep[b])
+				a = node[a][i];
+		}
+
+	}
+	if (a == b) {
+		return a;
+	}
+	else {
+		for (int i = 18; i >= 1; --i) {
+			if (dep[a] - (1 << (i-1)) >= 0 && node[a][i] != node[b][i]) {
+				a = node[a][i];
+				b = node[b][i];
+			}
+		}
+	}
+	return node[a][1];
+}
 int main() {
-	int a, b,m,n;
+
+	int n;
 	scanf("%d", &n);
-	//dep = vector<int>(n + 1, 0);
-	ac = new int[n + 1]();
-	dep = new int[n + 1]();
-	for(int i=0;i<n-1;i++){
+	for (int i = 0; i < n -1; i++) {
+		int a, b;
 		scanf("%d %d", &a, &b);
 		grap[a].push_back(b);
 		grap[b].push_back(a);
 	}
-	dep[0] = -1;
-	dfs(1, 0);
-	scanf("%d", &m);
-	while(m--) {
-		int res;
-		scanf("%d %d", &a, &b);
-		if (a == 1 || b == 1) {
-			printf("1\n"); 
-			continue;
-		}
-		if (dep[a] != dep[b]) {
-			if (dep[a] > dep[b]) swap(a, b);
-			while (dep[a]<dep[b])
-			{
-				b = ac[b];
-			}
-		}
-		res = a;
+	bfs(1);
+	getP(n);
 
-		while (true) {
-			if (a == b) {
-				res = a;
-				break;
-			}
-			a = ac[a];
-			b = ac[b];
-		}
+
+	int m;
+	scanf("%d", &m);
+	//while (m--) {
+	for (int i = 0; i < m; i++) {
+		int a, b;
+		scanf("%d %d", &a, &b);
 		
-		printf("%d\n", res);
+		printf("%d\n", LCA(a,b));
 	}
 	return 0;
 }
