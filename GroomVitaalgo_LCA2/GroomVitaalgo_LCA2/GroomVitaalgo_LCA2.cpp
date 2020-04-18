@@ -25,31 +25,34 @@ void bfs(int s) {
 	}
 }
 void getP(int n) {
-	for (int j = 2; (1 << j) <= n; ++j) {
-		for (int i = 1; i <= n ; ++i) {
-			if (node[i][j - 1] != 0)
-				node[i][j] = node[node[i][j - 1]][j - 1];
+	//for (int j = 2; (1 << j) <= n; ++j) {
+	for (int j = 2; j < n; j++) {
+		for (int i = 1; i <= n; ++i) {
+			if (node[i][j - 1] > 1)
+				node[i][j] = node[node[i][j - 1]][1];
 		}
 	}
 }
 int LCA(int a, int b) {
 	if (dep[a] < dep[b]) swap(a, b);
 	if (dep[a] != dep[b]) {
-		for (int i = 18; i >= 1; --i) {
-			if (dep[a] - (1 << (i-1)) >= dep[b])
-				a = node[a][i];
-		}
+		//for (int i = 18; i >= 1; --i) {
+			//while (dep[a]  > dep[b]){
+			//	a = node[a][1];
+		//}
+		a = node[a][dep[a] - dep[b]];
 
 	}
 	if (a == b) {
 		return a;
 	}
 	else {
-		for (int i = 18; i >= 1; --i) {
-			if (dep[a] - (1 << (i-1)) >= 0 && node[a][i] != node[b][i]) {
-				a = node[a][i];
-				b = node[b][i];
-			}
+		//for (int i = 18; i >= 1; --i) {
+		//	if (dep[a] - (1 << (i-1)) >= 0 && node[a][i] != node[b][i]) {
+		while (node[a][1] != node[b][1]) {
+			a = node[a][1];
+			b = node[b][1];
+
 		}
 	}
 	return node[a][1];
@@ -58,7 +61,7 @@ int main() {
 
 	int n;
 	scanf("%d", &n);
-	for (int i = 0; i < n -1; i++) {
+	for (int i = 0; i < n - 1; i++) {
 		int a, b;
 		scanf("%d %d", &a, &b);
 		grap[a].push_back(b);
@@ -74,8 +77,8 @@ int main() {
 	for (int i = 0; i < m; i++) {
 		int a, b;
 		scanf("%d %d", &a, &b);
-		
-		printf("%d\n", LCA(a,b));
+
+		printf("%d\n", LCA(a, b));
 	}
 	return 0;
 }
