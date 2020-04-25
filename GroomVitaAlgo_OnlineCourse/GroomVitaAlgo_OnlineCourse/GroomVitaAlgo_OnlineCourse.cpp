@@ -2,6 +2,17 @@
 #include<string>
 using namespace std;
 int main() {
+	int tot_h, tot_m, stud_h, stud_m;
+	scanf("%d:%d", &tot_h, &tot_m);
+	scanf("%d:%d", &stud_h, &stud_m);
+	tot_m += tot_h * 60;
+	stud_m += stud_h * 60;
+	if (tot_m > stud_m || stud_m - tot_m > 10)
+		printf("0");
+	else
+		printf("1");
+	/*
+	//not efficient
 	string  total, stud;
 	cin >> total;
 	cin >> stud;
@@ -36,6 +47,6 @@ int main() {
 			printf("0");
 		}
 	}
-
+	*/
 	return 0;
 }
